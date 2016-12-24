@@ -1,0 +1,13 @@
+{
+  "name": "tutoriel-electron",
+  "version": "1.0.0",
+  "description": "test of electron framework",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "MEH",
+  "devDependencies": {
+    "electron": "^1.4.13"
+  }
+}
