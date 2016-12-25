@@ -4,21 +4,21 @@ const BrowserWindow = electron.BrowserWindow;
 
 let mainWindow;
 
-function createWindow() {
+function createWindow () {
 
-    mainWindow = new BrowserWindow({width:1800, height: 1200});
+    mainWindow = new BrowserWindow({width: 1800, height: 1200});
 
-    mainWindow.loadURL('file://${__dirname}/index.html');
+    mainWindow.loadURL(`file://${__dirname}/index.html`);
 
     mainWindow.on('closed', () => {
         mainWindow = null;
-    });
-};
+    })
+}
 
-app.on('ready', createWindow());
+app.on('ready', createWindow);
 
-app.on('windows-all-closed', () => {
-    if (process.platform !== 'darwin'){
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
         app.quit();
     }
 });
