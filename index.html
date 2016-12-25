@@ -5,5 +5,14 @@
     </head>
     <body>
         <h1>Hello World !</h1>
+    <button id="ipc">Bouton</button>
+
+    <script>
+        const ipc = require('electron').ipcRenderer;
+
+        document.getElementById('ipc').addEventListener('click', () => {
+            ipc.send('log-error');
+        });
+    </script>
     </body>
 </html>
